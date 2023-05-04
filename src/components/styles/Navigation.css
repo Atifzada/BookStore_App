@@ -1,21 +1,21 @@
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7%;
-    padding: 4%;
-    background-color: rgb(204, 204, 204);
-  }
-  
-  .nav ul {
-    display: flex;
-    gap: 12%;
-  }
-  
- .nav ul li {
-    list-style-type: none;
-  }
-  
-  h1 {
-    color: rgb(0, 12, 184);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7%;
+  padding: 4%;
+  background-color: rgb(204, 204, 204);
+}
+
+.nav ul {
+  display: flex;
+  gap: 12%;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+h1 {
+  color: rgb(0, 12, 184);
+}
