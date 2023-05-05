@@ -6,7 +6,7 @@ function AddBook({ onSubmit }) {
   const [bookName, setBookName] = useState('');
   const [writer, setwriter] = useState('');
 
-  const submitHandle = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onSubmit({ bookName, writer });
     setBookName('');
@@ -14,16 +14,16 @@ function AddBook({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={submitHandle}>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="titleInput">
         Book Name:
         <input className="input" type="text" id="titleInput" value={bookName} onChange={(event) => setBookName(event.target.value)} placeholder="Enter book name" />
       </label>
       <label htmlFor="writer-input">
         Writer:
-        <input className="input" type="text" id="writer-input" value={writer} onChange={(event) => setwriter(event.target.value)} placeholder="Enter writer name" />
+        <input className="input" type="text" id="writerInput" value={writer} onChange={(event) => setwriter(event.target.value)} placeholder="Enter writer name" />
       </label>
-      <button type="submit">Add Book</button>
+      {/* <button type="submit">Add Book</button> */}
     </form>
   );
 }

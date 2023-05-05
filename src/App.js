@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import BooksList from './components/BooksList';
 import Nav from './components/Navigation';
-import AddBook from './components/NewBook';
+import Categories from './components/Categories';
 
 function App() {
   return (
@@ -9,9 +9,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<BooksList />} />
-        <Route path="/catergories" element={<p>Catergory</p>} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
-      <AddBook />
     </>
   );
 }
