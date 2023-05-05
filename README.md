@@ -1,3 +1,11 @@
+<a name="readme-top"></a>
+
+<div align="center">
+  <br/>
+
+  <h3><b>Bookstore</b></h3>
+
+</div>
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -22,10 +30,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math Magicians <a name="about-project"></a>
-
-**Math Magicians** "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA).
-
+# 📖 [Bookstore CMS] <a name="about-project"></a>
+Bookstore is app that I am going to create using react and redux. I will update the descritption respectivily.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -60,12 +66,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Made UI/UX of Calculator]**
-- **[Use of Big npm package]**
-- **[Basic Arthematic Operations of Calculator]**
-- **[Animated Loader used from NPM packages]**
-- **[Routing Pages]**
-- **[Snapshot and Unit Testing using Jest & React Testing Library]**
+- **[Usage of React Libaray]**
+- **[Usge of virtual DOM]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,7 +85,7 @@ Browser
 
 ### Setup
 
-git clone https://github.com/Atifzada/Maths-Magician.git
+git clone https://github.com/Atifzada/BookStore_App.git
 
 cd Maths-Magician
 

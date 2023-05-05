@@ -1,0 +1,11 @@
+.books {
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+  padding: 6%;
+}
+
+.btn {
+  padding: 5px;
+  margin: 10px 15px 0 0;
+}
