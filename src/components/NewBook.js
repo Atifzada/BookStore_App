@@ -1,34 +1,60 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './styles/NewBook.css';
+import { nanoid } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-function AddBook({ onSubmit }) {
-  const [bookName, setBookName] = useState('');
-  const [writer, setwriter] = useState('');
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit({ bookName, writer });
-    setBookName('');
-    setwriter('');
+function BookForm() {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
+  const addHandle = () => {
+    // Check if title and author are not empty
+    if (title.trim() !== '' && author.trim() !== '') {
+      dispatch(
+        addBook({
+          item_id: nanoid(),
+          title,
+          author,
+          category: 'unknown',
+        }),
+      );
+      setTitle('');
+      setAuthor('');
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="titleInput">
-        Book Name:
-        <input className="input" type="text" id="titleInput" value={bookName} onChange={(event) => setBookName(event.target.value)} placeholder="Enter book name" />
+    <form>
+      <label htmlFor="title-input">
+        Title:
+        <input
+          type="text"
+          id="title-input"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
       </label>
-      <label htmlFor="writer-input">
-        Writer:
-        <input className="input" type="text" id="writerInput" value={writer} onChange={(event) => setwriter(event.target.value)} placeholder="Enter writer name" />
+      <label htmlFor="author-input">
+        Author:
+        <input
+          type="text"
+          id="author-input"
+          value={author}
+          onChange={(event) => setAuthor(event.target.value)}
+        />
       </label>
-      {/* <button type="submit">Add Book</button> */}
+      <button
+        type="button"
+        onClick={() => {
+          addHandle();
+        }}
+      >
+        Add Book
+      </button>
     </form>
   );
 }
 
-AddBook.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
-export default AddBook;
+export default BookForm;
