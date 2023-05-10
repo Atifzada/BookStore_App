@@ -1,12 +1,13 @@
 import './styles/Books.css';
+import PropTypes from 'prop-types';
 
-function Books() {
+function Book({ book }) {
   return (
-    <div className="books">
+    <div className="books" key={book.item_id}>
       <div>
         <p>Book</p>
-        <h2>In the Line of Fire</h2>
-        <p>General R. Pervez Msharraf </p>
+        <h2>{book.title}</h2>
+        <p>{book.author}</p>
         <p>
           <button className="btn" type="submit">Edit</button>
           <button className="btn" type="submit">Remove</button>
@@ -24,5 +25,13 @@ function Books() {
     </div>
   );
 }
+Book.propTypes = {
+  book: PropTypes.shape({
+    item_id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
-export default Books;
+export default Book;
