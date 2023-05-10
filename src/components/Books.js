@@ -1,4 +1,5 @@
 import './styles/Books.css';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { delBook } from '../redux/books/booksSlice';
@@ -12,9 +13,12 @@ function Book({ book }) {
   return (
     <div className="books">
       <div>
-        <p>Book</p>
+        <p>Book_Title</p>
         <h2>{book.title}</h2>
-        <p>{book.author}</p>
+        <p>
+          Written by
+          <h4>{book.author}</h4>
+        </p>
         <p>
           <button type="submit" onClick={() => deleteHandler(book.item_id)}>Delete</button>
         </p>
@@ -32,8 +36,8 @@ function Book({ book }) {
 }
 Book.propTypes = {
   book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,

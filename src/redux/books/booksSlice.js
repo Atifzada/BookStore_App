@@ -27,7 +27,7 @@ const booksSlice = createSlice({
   name: 'book',
   initialState,
   reducers: {
-    addBook: (state, payload) => {
+    addBook: (state, { payload }) => {
       state.books.push({
         item_id: payload.item_id,
         title: payload.title,
@@ -36,7 +36,6 @@ const booksSlice = createSlice({
       });
     },
     delBook: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
       state.books = state.books.filter(
         (book) => book.item_id !== action.payload,
       );
