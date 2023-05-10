@@ -5,11 +5,11 @@ import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 
-function BookForm() {
+function NewBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
-  const addHandle = () => {
+  const addHandler = () => {
     // Check if title and author are not empty
     if (title.trim() !== '' && author.trim() !== '') {
       dispatch(
@@ -27,34 +27,17 @@ function BookForm() {
 
   return (
     <form>
-      <label htmlFor="title-input">
+      <label htmlFor="titleInput">
         Title:
-        <input
-          type="text"
-          id="title-input"
-          value={title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
+        <input type="text" id="titleInput" value={title} onChange={(event) => setTitle(event.target.value)} />
       </label>
-      <label htmlFor="author-input">
+      <label htmlFor="authorInput">
         Author:
-        <input
-          type="text"
-          id="author-input"
-          value={author}
-          onChange={(event) => setAuthor(event.target.value)}
-        />
+        <input type="text" id="authorInput" value={author} onChange={(event) => setAuthor(event.target.value)} />
       </label>
-      <button
-        type="button"
-        onClick={() => {
-          addHandle();
-        }}
-      >
-        Add Book
-      </button>
+      <button type="button" onClick={() => { addHandler(); }}>Add Book </button>
     </form>
   );
 }
 
-export default BookForm;
+export default NewBook;
