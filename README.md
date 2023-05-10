@@ -69,6 +69,7 @@ Bookstore is app that I am going to create using react and redux. I will update 
 - **[Usage of React Libaray]**
 - **[Usge of virtual DOM]**
 - **[Redux toolkit ]**
+- **[Redux in React components ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
