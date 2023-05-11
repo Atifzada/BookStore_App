@@ -2,16 +2,23 @@ import React, { useState } from 'react';
 import './styles/NewBook.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, postData } from '../redux/books/booksSlice';
 
 function NewBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [error, setError] = useState('');
   const dispatch = useDispatch();
 
   const addHandler = () => {
     if (title.trim() !== '' && author.trim() !== '') {
       dispatch(
+        postData({
+          item_id: nanoid(),
+          title,
+          author,
+          // category: 'unknown',
+        }),
         addBook({
           item_id: nanoid(),
           title,
@@ -21,6 +28,9 @@ function NewBook() {
       );
       setTitle('');
       setAuthor('');
+      setError('');
+    } else {
+      setError('Book Name and Writer should be provided');
     }
   };
 
@@ -35,6 +45,7 @@ function NewBook() {
         <input type="text" id="authorInput" value={author} onChange={(event) => setAuthor(event.target.value)} />
       </label>
       <button type="button" onClick={() => { addHandler(); }}> Add Book </button>
+      <p>{error}</p>
     </form>
   );
 }
