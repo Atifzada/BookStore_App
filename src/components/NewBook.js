@@ -17,13 +17,15 @@ function NewBook() {
           item_id: nanoid(),
           title,
           author,
-          // category: 'unknown',
+          category: 'undefined',
         }),
+      );
+      dispatch(
         addBook({
           item_id: nanoid(),
           title,
           author,
-          // category: 'unknown',
+          category: 'undefined',
         }),
       );
       setTitle('');
@@ -35,18 +37,20 @@ function NewBook() {
   };
 
   return (
-    <form>
-      <label htmlFor="titleInput">
-        Title:
-        <input type="text" id="titleInput" value={title} onChange={(event) => setTitle(event.target.value)} />
-      </label>
-      <label htmlFor="authorInput">
-        Author:
-        <input type="text" id="authorInput" value={author} onChange={(event) => setAuthor(event.target.value)} />
-      </label>
-      <button type="button" onClick={() => { addHandler(); }}> Add Book </button>
+    <>
+      <form>
+        <label htmlFor="titleInput">
+          Title:
+          <input type="text" id="titleInput" value={title} onChange={(event) => setTitle(event.target.value)} />
+        </label>
+        <label htmlFor="authorInput">
+          Author:
+          <input type="text" id="authorInput" value={author} onChange={(event) => setAuthor(event.target.value)} />
+        </label>
+        <button type="button" onClick={() => { addHandler(); }}> Add Book </button>
+      </form>
       <p>{error}</p>
-    </form>
+    </>
   );
 }
 

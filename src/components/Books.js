@@ -18,7 +18,7 @@ function Book({ book }) {
         <h2>{book.title}</h2>
         <p>
           Written by
-          <h4>{book.author}</h4>
+          <span>{book.author}</span>
         </p>
         <p>
           <button type="submit" onClick={() => deleteHandler(book.item_id)}>Delete</button>

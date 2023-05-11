@@ -4,7 +4,7 @@ import axios from 'axios';
 const BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/xGOGpkgr9AZUvoceEaCM/books';
 const initialState = {
   books: [],
-  isLoading: Boolean,
+  isLoading: false,
   error: undefined,
 };
 
@@ -47,8 +47,12 @@ const booksSlice = createSlice({
     });
     creater.newCase(getData.fulfilled, (state, { payload }) => {
       state.isLoading = false;
-      state.books = Object.entries(payload).flatMap(([key, value]) => value.map((book) => ({
-        ...book, item_id: key, progress: 80,
+      state.books = Object.entries(payload).flatMap(([key, value]) => value.map((data) => ({
+        ...data,
+        item_id: key,
+        title: data.title,
+        author: data.author,
+        progress: 50,
       })));
     });
     creater.newCase(getData.rejected, (state, action) => {
