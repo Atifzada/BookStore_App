@@ -114,9 +114,9 @@ npm run build
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Atif Zada**
-- GitHub: [@Atif-Zada](https://github.com/Atif-Zada)
+- GitHub: [@Atif-Zada](https://github.com/AtifZada)
 - Twitter: [@Atif-Zada](https://twitter.com/Atif-Zada)
-- LinkedIn: [@Atif-Zada](https://linkedin.com/in/Atif-Zada)
+- LinkedIn: [@Atif-Zada](https://linkedin.com/in/AtifZada)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,7 +124,8 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Adding more features to the application**
+- **Fetching data from an external api**
+- **Improve UI of the bookstore app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
