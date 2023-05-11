@@ -1,34 +1,42 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './styles/NewBook.css';
+import { nanoid } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-function AddBook({ onSubmit }) {
-  const [bookName, setBookName] = useState('');
-  const [writer, setwriter] = useState('');
+function NewBook() {
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const dispatch = useDispatch();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSubmit({ bookName, writer });
-    setBookName('');
-    setwriter('');
+  const addHandler = () => {
+    if (title.trim() !== '' && author.trim() !== '') {
+      dispatch(
+        addBook({
+          item_id: nanoid(),
+          title,
+          author,
+          // category: 'unknown',
+        }),
+      );
+      setTitle('');
+      setAuthor('');
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label htmlFor="titleInput">
-        Book Name:
-        <input className="input" type="text" id="titleInput" value={bookName} onChange={(event) => setBookName(event.target.value)} placeholder="Enter book name" />
+        Title:
+        <input type="text" id="titleInput" value={title} onChange={(event) => setTitle(event.target.value)} />
       </label>
-      <label htmlFor="writer-input">
-        Writer:
-        <input className="input" type="text" id="writerInput" value={writer} onChange={(event) => setwriter(event.target.value)} placeholder="Enter writer name" />
+      <label htmlFor="authorInput">
+        Author:
+        <input type="text" id="authorInput" value={author} onChange={(event) => setAuthor(event.target.value)} />
       </label>
-      {/* <button type="submit">Add Book</button> */}
+      <button type="button" onClick={() => { addHandler(); }}> Add Book </button>
     </form>
   );
 }
 
-AddBook.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
-export default AddBook;
+export default NewBook;

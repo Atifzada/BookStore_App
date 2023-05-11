@@ -1,16 +1,26 @@
 import './styles/Books.css';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { delBook } from '../redux/books/booksSlice';
 
-function Books() {
+function Book({ book }) {
+  const dispatch = useDispatch();
+
+  const deleteHandler = (id) => {
+    dispatch(delBook(id));
+  };
   return (
     <div className="books">
       <div>
-        <p>Book</p>
-        <h2>In the Line of Fire</h2>
-        <p>General R. Pervez Msharraf </p>
+        <p>Book_Title</p>
+        <h2>{book.title}</h2>
         <p>
-          <button className="btn" type="submit">Edit</button>
-          <button className="btn" type="submit">Remove</button>
-          <button className="btn" type="submit">comment</button>
+          Written by
+          <h4>{book.author}</h4>
+        </p>
+        <p>
+          <button type="submit" onClick={() => deleteHandler(book.item_id)}>Delete</button>
         </p>
       </div>
       <div>
@@ -24,5 +34,13 @@ function Books() {
     </div>
   );
 }
+Book.propTypes = {
+  book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
-export default Books;
+export default Book;

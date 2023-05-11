@@ -1,13 +1,20 @@
 import React from 'react';
-import Books from './Books';
-import AddBook from './NewBook';
+import { useSelector } from 'react-redux';
+import Book from './Books';
 
-function BooksList() {
+function BookList() {
+  const { books } = useSelector((state) => state.books);
+
+  if (!Array.isArray(books)) {
+    return null;
+  }
+
   return (
-    <>
-      <div><Books /></div>
-      <div><AddBook /></div>
-    </>
+    <div>
+      {books.map((book) => (
+        <Book key={book.item_id} book={book} />
+      ))}
+    </div>
   );
 }
-export default BooksList;
+export default BookList;
