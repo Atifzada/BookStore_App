@@ -14,9 +14,9 @@
   background-color: #fafafa;
 }
 
-.formDiv {
+/* .formDiv {
   padding: 1rem 0;
-}
+} */
 
 .footerDiv {
   height: 0.125rem;
@@ -39,7 +39,7 @@
   justify-content: center;
   grid-gap: 32px;
   gap: 32px;
-  padding-bottom: 16.563rem;
+  padding-bottom: 10.563rem;
 }
 
 .bookTitle,

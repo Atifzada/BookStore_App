@@ -1,18 +1,17 @@
 .bookSection {
-  background-color: #fafafa;
-  padding-top: 2%;
+  margin: 0 2%;
   padding-bottom: 0%;
 }
 
 .books {
   display: flex;
   gap: 25%;
-  padding: 1.5% 2.5%;
-  width: 90%;
+  padding: 1% 2.5%;
+  /* width: 90%; */
   border: 1px solid #e8e8e8;
   background-color: #fff;
   border-radius: 2px;
-  margin-left: 5%;
+  margin: 2%;
 }
 
 .mainDiv {
@@ -162,4 +161,5 @@
   border-radius: 2px;
   padding: 5% 14%;
   background-color: #0087ff;
+  color: #fff;
 }

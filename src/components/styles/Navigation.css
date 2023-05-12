@@ -6,8 +6,8 @@
 
 .nav ul {
   display: flex;
-  gap: 10%;
-  padding-top: 3%;
+  gap: 40%;
+  padding-top: 2%;
   padding-left: 0;
 }
 
@@ -16,6 +16,7 @@ a {
   list-style-type: none;
   text-decoration: none;
   color: #121212;
+  font-size: 20px;
 }
 
 h1 {
@@ -28,7 +29,7 @@ h1 {
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
-  padding: 2% 5%;
+  padding: 1% 8%;
 }
 
 .USER-ICON {

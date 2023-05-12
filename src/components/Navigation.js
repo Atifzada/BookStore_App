@@ -5,7 +5,7 @@ import './styles/Navigation.css';
 function Nav() {
   return (
     <nav className="nav">
-      <h1>BookStore</h1>
+      <h1>Bookstore CMS</h1>
       <ul>
         <li className="book">
           <Link to="/">Books</Link>
