@@ -70,6 +70,7 @@ Bookstore is app that I am going to create using react and redux. I will update 
 - **[Usge of virtual DOM]**
 - **[Redux toolkit ]**
 - **[Redux in React components ]**
+- **[Connect React Redux to an External API ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,7 +125,6 @@ npm run build
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Fetching data from an external api**
 - **Improve UI of the bookstore app**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
