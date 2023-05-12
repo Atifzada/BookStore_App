@@ -1,11 +1,165 @@
-.books {
-  display: flex;
-  gap: 15%;
-  justify-content: center;
-  padding: 2%;
+.bookSection {
+  background-color: #fafafa;
+  padding-top: 2%;
+  padding-bottom: 0%;
 }
 
-.btn {
-  padding: 5px;
-  margin: 10px 15px 0 0;
+.books {
+  display: flex;
+  gap: 25%;
+  padding: 1.5% 2.5%;
+  width: 90%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-left: 5%;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookCat {
+  opacity: 0.5;
+  font-family: "Montserrat", serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin: 0;
+}
+
+
+.booksTitle {
+  font-family: serif;
+  font-size: 1.775rem;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  color: #121212;
+}
+
+.bookAuthor {
+  font-family: "RobotoSlab", serif;
+  font-size: 0.975rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  margin: 0;
+}
+
+.bookBtn {
+  display: flex;
+  gap: 5%;
+  margin-top: 1.313rem;
+}
+
+.btn-1 {
+  border: none;
+  background: white;
+  font-family: "RobotoSlab", serif;
+  font-size: 0.975rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+
+.vl {
+  border-left: 1px solid #121212;
+  height: 25px;
+  opacity: 0.5;
+  margin: 0 7%;
+}
+
+.PRO-CARD {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.circle {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  align-items: center;
+}
+
+.progressCircle {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #0087ff;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+}
+
+.progress,
+.status {
+  display: block;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: #121212;
+  margin: 0;
+}
+
+
+.status {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+
+.divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+}
+
+.chapContainer {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+}
+
+.chap,
+.chapLable {
+  font-family: "RobotoSlab", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.chapLable {
+  font-size: 0.813rem;
+  opacity: 0.5;
+}
+
+.proBtn{
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 2px;
+  padding: 5% 14%;
+  background-color: #0087ff;
 }

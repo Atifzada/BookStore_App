@@ -1,8 +1,9 @@
-import './styles/Books.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Button } from 'reactstrap';
 import { delBook, delData } from '../redux/books/booksSlice';
+import './styles/Books.css';
 
 function Book({ book }) {
   const dispatch = useDispatch();
@@ -12,27 +13,49 @@ function Book({ book }) {
     dispatch(delData(id));
   };
   return (
-    <div className="books">
-      <div>
-        <p>Book_Title</p>
-        <h2>{book.title}</h2>
-        <p>
-          Written by
-          <span>{book.author}</span>
-        </p>
-        <p>
-          <button type="submit" onClick={() => deleteHandler(book.item_id)}>Delete</button>
-        </p>
+    <section className="bookSection">
+      <div className="books">
+        <div className="mainDiv">
+          <p className="bookCat">Book_Title</p>
+          <h2 className="booksTitle">{book.title}</h2>
+          <p className="bookAuthor">{book.author}</p>
+          <p className="bookBtn">
+            <button type="submit" className="btn-1">
+              Comment
+            </button>
+            <span className="vl" />
+            <button type="submit" className="btn-1" onClick={() => deleteHandler(book.item_id)}>
+              Delete
+            </button>
+            <span className="vl" />
+            <button type="submit" className="btn-1">Edit</button>
+          </p>
+        </div>
+
+        <div className="PRO-CARD">
+          <div className="circle">
+            <div className="progressCircle" />
+          </div>
+          <div>
+            <p className="progress">80%</p>
+            <p className="status">Completed</p>
+          </div>
+          <div className="divider" />
+          <div className="chapContainer">
+            <div>
+              <p className="chapLable">CURRENT CHAPTER</p>
+              <p className="chap">Chapter 09</p>
+            </div>
+            <div>
+              <Button className="proBtn">
+                Update progress
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <p>Status</p>
-      </div>
-      <div>
-        <p>Current Chapter</p>
-        <h3>Chapter 03</h3>
-        <button className="btn" type="submit">Progress</button>
-      </div>
-    </div>
+
+    </section>
   );
 }
 Book.propTypes = {
