@@ -17,7 +17,7 @@ function NewBook() {
           item_id: nanoid(),
           title,
           author,
-          category: 'undefined',
+          category: 'unknown',
         }),
       );
       dispatch(
@@ -25,14 +25,14 @@ function NewBook() {
           item_id: nanoid(),
           title,
           author,
-          category: 'undefined',
+          category: 'unknown',
         }),
       );
+      setError('');
       setTitle('');
       setAuthor('');
-      setError('');
     } else {
-      setError('Book Name and Writer should be provided');
+      setError('Book title and Author are required');
     }
   };
 

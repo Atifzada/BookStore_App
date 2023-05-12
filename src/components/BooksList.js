@@ -8,7 +8,8 @@ function BookList() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getData());
-  }, [dispatch]);
+  }, []);
+
   if (!Array.isArray(books)) {
     return null;
   }
