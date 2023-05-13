@@ -6,13 +6,11 @@
 .books {
   display: flex;
   gap: 25%;
-  padding: 1% 2.5%;
-
-  /* width: 90%; */
+  padding: 2% 2.5%;
   border: 1px solid #e8e8e8;
   background-color: #fff;
   border-radius: 2px;
-  margin: 2%;
+  margin: 1.5%;
 }
 
 .mainDiv {
@@ -33,7 +31,7 @@
   margin: 0;
 }
 
-.booksTitle {
+.bookName {
   font-family: serif;
   font-size: 1.775rem;
   font-weight: bolder;
@@ -42,6 +40,7 @@
   line-height: normal;
   letter-spacing: -1.2px;
   color: #121212;
+  margin: 5px 0;
 }
 
 .bookAuthor {
@@ -73,6 +72,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
+  padding: 0;
 }
 
 .vl {

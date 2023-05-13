@@ -17,7 +17,7 @@ function Book({ book }) {
       <div className="books">
         <div className="mainDiv">
           <p className="bookCat">Book_Title</p>
-          <h2 className="booksTitle">{book.title}</h2>
+          <h2 className="bookName">{book.title}</h2>
           <p className="bookAuthor">{book.author}</p>
           <p className="bookBtn">
             <button type="submit" className="btn-1">
@@ -37,7 +37,7 @@ function Book({ book }) {
             <div className="progressCircle" />
           </div>
           <div>
-            <p className="progress">80%</p>
+            <p className="progress">64%</p>
             <p className="status">Completed</p>
           </div>
           <div className="divider" />

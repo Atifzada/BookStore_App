@@ -34,11 +34,14 @@
 }
 
 .form {
-  margin-top: 20px;
+  /* margin-top: 20px;
   display: flex;
   justify-content: center;
   grid-gap: 32px;
   gap: 32px;
+  padding-bottom: 10.563rem; */
+  display: flex;
+  margin: 0 5%;
   padding-bottom: 10.563rem;
 }
 
@@ -55,13 +58,12 @@
 }
 
 .bookTitle {
-  width: 185%;
-  margin-left: 27%;
+  width: 225%;
 }
 
 .author {
   width: 130%;
-  margin-left: 180%;
+  margin-left: 150%;
 }
 
 .formBtn {
