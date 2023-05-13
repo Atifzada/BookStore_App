@@ -9,6 +9,7 @@ function BookList() {
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
+
   if (!Array.isArray(books)) {
     return null;
   }

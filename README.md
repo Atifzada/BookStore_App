@@ -71,6 +71,8 @@ Bookstore is app that I am going to create using react and redux. I will update 
 - **[Redux toolkit ]**
 - **[Redux in React components ]**
 - **[Connect React Redux to an External API ]**
+- **[Functional progress card]**
+- **[Addition of categories]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
